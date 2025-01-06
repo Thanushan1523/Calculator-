@@ -91,6 +91,10 @@ function reducer(state, { type, payload }) {
   }
 }
 
+const INTEGER_FORMATTER = new Intl.NumberFormat("en-us" ,{
+  maximumFractionDigits:0 ,
+})
+
 function evaluate({currentOperand,previousOperand,operation}){
   const prev = parseFloat(previousOperand)
   const current =parseFloat(currentOperand)
